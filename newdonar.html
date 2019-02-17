@@ -78,6 +78,8 @@ background-size: cover;
         text-align:center;
       }
 </style>
+
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 </head>
 
 
@@ -88,9 +90,16 @@ background-size: cover;
 <div class="form1">
 
 
-<form action="donarinsert.php" method="POST" autocomplete="on">
+<form >
+
+    <p> Email ID:</p><br>
+   <input type="text" id="mailid" placeholder="EMAIL ID"  required>
+
+   <br><br>  
+  
+
   <p>Donor name:<br></p>
-  <input type="text" name="name" placeholder="ENTER NAME"required>
+  <input type="text" id="name" placeholder="ENTER NAME"required>
   <br>
 
 
@@ -99,15 +108,15 @@ background-size: cover;
 <div class="but">
   MALE:<input type="radio" name="gender" value="male" required>
 FEMALE  <input type="radio" name="gender" value="female"required>
-OTHER  <input type="radio"name="gender" value="other" required>
+OTHER  <input type="radio" name="gender" value="other" required>
 </div>
   <br>
  <p>Date Of Birth:<br></p>
- <input type="date" name="dob" required>
+ <input type="date" id="dob" required>
  <br>
 
   <p>Contact number:<br></p>
-  <input pattern=".{10}" type="number" name="number" placeholder="ENTER VALID PHONE NUMBER"   required>
+  <input pattern=".{10}" type="number" id="number" placeholder="ENTER VALID PHONE NUMBER"   required>
   <br>
 
 
@@ -115,7 +124,7 @@ OTHER  <input type="radio"name="gender" value="other" required>
 
 
 
-  <select name="blood_group">
+  <select id="blood_group">
     <option value=""required>---CHOOSE YOUR BLOOD GROUP---</option>
     <option value="A+">A+</option>
     <option value="A-">A-</option>
@@ -128,22 +137,19 @@ OTHER  <input type="radio"name="gender" value="other" required>
    </select>
   <br><br>
 
-
-  <p> Email ID:</p><br>
-   <input type="email" name="mailid" placeholder="EMAIL ID"  required>
-
-   <br><br>
-
-   <p>Enter password:</p><br>
-   <input type="password" name="password" placeholder="PASSWORD"required>
-   <br><br>
+   <!--  <p>Quantity of blood donating:<br></p>
+  <input pattern=".{2}" type="number" id="bqty" placeholder="MAX 11 Litres"   required>
+  <br><br> -->
+  
 
 
-   <input type="submit"  value="register">
+
+   <button type="submit" id="NDsubmit">register</button>
 
 
 </div>
 
 </form>
 </body>
+ <script type="text/javascript" src="js/index.js"> </script>
 </html>
