@@ -93,6 +93,8 @@ background-attachment: fixed;
         text-align:center;
       }
 </style>
+    <script type="text/javascript" src="js/jq.js"></script>
+
 </head>
 
 
@@ -101,13 +103,13 @@ background-attachment: fixed;
 <header>BLOOD REQUEST</header>
 
 <div class="form1">
-<form action = "pc.php" method="POST">
+<form >
   <p>Patient name:</p><br>
-  <input type="text" name="name" placeholder="enter name" required>
+  <input type="text" id="name" placeholder="enter name" required>
   <br>
 
 
- <p>Gender:</p><br>
+ <!-- <p>Gender:</p><br>
  <div class="controls">
    <label class="radio">
  <input type="radio" name="gender" value="male" required>
@@ -123,13 +125,13 @@ FEMALE<br>
 OTHER<br>
 </label>
 </div>
-  <br>
- <p>Date Of Birth:</p><br>
+  <br> -->
+<!--  <p>Date Of Birth:</p><br>
  <input type="date" name="dob" placeholder="DOBrequired">
- <br>
+ <br> -->
 
   <p>Contact number:</p><br>
-  <input type="number" name="number" placeholder="enter number" required >
+  <input type="number" id="number" placeholder="enter number" required >
   <br>
 
 
@@ -137,35 +139,38 @@ OTHER<br>
 
 
 
-  <select name="blood_group" required>
-    <option value="AP" selected="selected">A+</option>
-    <option value="AN">A-</option>
-    <option value="BP">B+</option>
-    <option value="BN">B-</option>
-    <option value="ABP">AB+</option>
-    <option value="ABN">AB-</option>
-    <option value="OP">O+</option>
-    <option value="ONN">O-</option>
+  <select id="blood_group" required>
+    <option value="A+" selected="selected">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
    </select>
   <br><br>
 
-<p> Units of blood required:</p><br>
+<!-- <p> Units of blood required:</p><br>
  <input type="number" name="units" placeholder="ENTER A UNIT FROM 1-10" required value="10">
  <br>
- <br>
+ <br> -->
 
 
-   <p>Email ID:</p><br>
+  <!--  <p>Email ID:</p><br>
    <input type="email" name="mailid" placeholder="Mail  id" required>
-   <br><br>
+   <br><br> -->
 
 
- <input type="submit" value="ORDER FOR BLOOD">
-
-
-
+ <BUTTON type="submit" id="btsearch">Search FOR BLOOD</BUTTON> 
 
 
 
+  <div id="results"></div>
 
-</div></form></div></body></html>
+
+
+</div></form></div>
+</body>
+<script type="text/javascript" src="js/search.js"> </script>
+</html>

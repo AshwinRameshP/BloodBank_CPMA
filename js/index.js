@@ -26,7 +26,7 @@ var createStatement = "CREATE TABLE IF NOT EXISTS Donors (email varchar(25) PRIM
  
         {
  
-            alert('Databases are not supported in this browser.');
+            alert('Databases are not supported in this Device.');
  
         }
  
